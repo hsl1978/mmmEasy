@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="./css/productlist.css">
+  <script src="./lib/flexible/flexible.js"></script>
+</head>
+<body>
+  <div class="mmm_container">
+    <!-- 头部区域 -->
+    <header class="mmm_header" id="mmm_header">
+      <div class="logo">
+        <a href="index.html">
+          <img src="./images/header_logo.png" alt="">
+        </a>
+      </div>
+      <div class="down">
+        <a href="#">
+          <img src="./images/header_app.png" alt="">
+        </a>
+      </div>
+    </header>
+    <!-- 搜索区域 -->
+    <div class="mmm_search">
+      <form action="" class="search" id="form">
+        <input type="search" placeholder="请输入您想比价的商品" id="index-search">
+        <input type="button" name="" id="" value="搜索">
+      </form>
+    </div>
+   
+    <!-- 商品列表部分 -->
+    <section id="product-list">
+        <nav class="product-list-title clearfix">
+         <!-- 挖个坑 -->
+        </nav>
+        <div class="productlist_content">
+            <!-- 挖个坑 -->
+            <!-- 分页 -->
+            
+        </div>
+    </section>
+  
+    
+   
+   
+    <!-- 底部区域 -->
+    <footer class="mmm_footer" id="mmm_footer">
+      <div class="footer_top">
+        <a href="javascript:;">登录</a>
+        <a href="javascript:;">注册</a>
+        <a href="#" style="width: 40%;border: none;" id="droup">
+          <img src="http://www.zuyushop.com/wap/images/top.jpg" alt="">
+          返回顶部</a>
+      </div>
+      <div class="footer_info">
+        <p>
+          <a href="javascript:;" style="color: red;">手机APP下载</a>
+          <a href="javascript:;">慢慢买手机版</a>
+          -- 掌上比价平台
+            
+        </p>
+        <p>m.manmanbuy.com</p>
+      </div>
+    </footer>
+    
+  </div>
+
+  
+
+
+  <!--三级菜单区域动态模板渲染  -->
+  <script type="text/html" id="threeTpl">
+    {{each result v i}}
+    <a href="index.html">首页</a> >
+    <a href="category.html">全部分类</a> >
+    <a href="#">{{ v.category }}</a> >
+    <a href="#" class="select">筛选</a> 
+    {{/each}}
+  </script>
+
+    <!--商品列表区域动态模板渲染  -->
+    <script type="text/html" id="product-listTpl">
+      <ul>
+       {{each result v i}}
+      <li>
+          <a href="bijia.html?productId={{v.productId}}&categoryId={{v.categoryId}}&category={{category}}&pageId={{currentpage}}" class="clearfix">
+              <div class="pic">
+                 {{# v.productImg}}
+              </div>
+              <div class="info">
+                <div class="text">{{v.productName}}</div>
+                <div class="price clearfix"><em>{{v.productPrice}}</em></div>
+                <div class="other"><em>{{v.productQuote}}</em><em>{{v.productCom}}</em></div>
+              </div>
+          </a>
+        </li>
+         {{/each}}
+      </ul>
+      <!-- 分页 -->
+      <div class="page clearfix">
+        <span><a href="#" class="up">上一页</a></span>
+        <span>
+          <select name="" id="selectPage">
+            var pagenum = {{pagenum}};
+          <% 
+            for(var i=0;i<pagenum; i++) { 
+          %>
+            {{if i + 1 === currentpage}}
+            <option selected value="<%= (i+1) %>"><%= (i+1) %>/{{pagenum}}</option>
+            {{else}}
+            <option value="<%= (i+1) %>"><%= (i+1) %>/{{pagenum}}</option>
+            {{/if}}
+            <% } %>
+          </select>
+        </span>
+        <span><a href="#" class="down">下一页</a></span>
+      </div>
+
+    </script>
+
+    <!-- 分页的模板 -->
+ 
+
+
+  <!-- 引入jq -->
+  <script src="./lib/jquery/jquery.min.js"></script>
+  <!-- 引入模板引擎 -->
+  <script src="./lib/artTemplate/template-web.js"></script>
+  <script src="./js/common.js"></script>
+  <script src="./js/productlist.js"></script>
+  
+</body>
+</html>

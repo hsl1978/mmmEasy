@@ -1,0 +1,276 @@
+@charset "utf-8";
+
+/* CSS Document */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+input,
+select,
+form images,
+button {
+  vertical-align: middle;
+  -webkit-tap-highlight-color: transparent;
+  outline: 0;
+}
+
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+.clearfix {
+  zoom: 1;
+}
+
+textarea {
+  width: 95%;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+em,
+i {
+  font-style: normal;
+}
+
+img {
+  border: none;
+}
+
+input,
+img {
+  vertical-align: middle;
+}
+
+body {
+  color: #000;
+  font-family: arial;
+  background: #fff;
+  overflow-x: hidden;
+}
+
+// 左浮动
+.pull-left {
+  float: left;
+}
+.pull-right {
+  float: right;
+}
+
+// 主题色
+@mainColor: #ff9000;
+
+// 基准值
+@desgin: 750; // 设计图尺寸 750
+@base: @desgin / 10; // 基准值     75
+// 公共的头部样式
+.mmm_header {
+  width: 100%;
+  height: 50rem / @base;
+  line-height: 50rem/@base;
+  background-color: @mainColor;
+  position: relative;
+
+  .logo {
+    padding-left: 12rem / @base;
+    width: 75%;
+    margin-left: 5rem / @base;
+
+    a > img {
+      max-height: 25rem / @base;
+    }
+  }
+
+  .down {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding-right: 7rem / @base;
+
+    a > img {
+      max-height: 34rem / @base;
+      overflow: hidden;
+    }
+  }
+}
+
+
+// 公共的搜索功能
+ 
+.mmm_search {
+  padding: 0 10rem / @base;
+  height: 50rem / @base;
+  line-height: 50rem / @base;
+  background-color: #fff;
+
+  .search {
+    position: relative;
+    padding-right: 70rem / @base;
+
+    input[type="search"] {
+      width: 100%;
+      border: none;
+      background-color: #f1f1f1;
+      height: 30rem / @base;
+      line-height: 30rem / @base;
+      border-radius: 15rem / @base;
+      font-size: 13rem / @base;
+      padding-left: 20rem / @base;
+      padding-right: 50rem / @base;
+    }
+    input[type="button"] {
+      position: absolute;
+      width: 63rem / @base;
+      background-color: #ff841d;
+      top: 11rem / @base;
+      right: 0;
+      height: 30rem / @base;
+      line-height: 30rem / @base;
+      border: none;
+      border-radius: 15rem / @base;
+      font-size: 16rem / @base;
+      color: #fff;
+    }
+  }
+}
+
+// 公共的底部样式
+
+.mmm_footer{
+
+  .footer_top{
+    margin-top: 25rem/@base;
+    background-color: #efefef;
+    border-top: 1rem/@base solid #c4c4c4;
+    border-bottom: 1rem/@base solid #c4c4c4;
+    height: 34rem/@base;
+    line-height: 34rem/@base;
+ 
+ 
+    a{
+      float: left;
+      font-size: 14rem/@base;
+      border-right: 1rem/@base solid #c4c4c4;
+      text-align: center;
+      width: 30%;
+ 
+      img{
+        width: 15rem/@base;
+        height: 15rem/@base;
+        vertical-align: middle;
+        margin-top: -5rem/@base;
+        margin-right: 2rem/@base;
+      }
+    }
+ }
+
+ .footer_info{
+   background: #efefef;
+   text-align: center;
+   font-size: 12rem/@base;
+   color: #666;
+   padding: 15rem/@base 0; 
+ }
+
+}
+
+
+
+// 公共的另一个头部样式
+// 头部区域
+.sq_header {
+  width: 100%;
+  height: 44rem / @base;
+  background-color: #ff841d;
+  color: #fff;
+  padding: 0 50rem/@base;
+  position: relative;
+  line-height: 44rem/@base;
+
+  .back {
+    height: 44rem / @base;
+    width: 50rem / @base;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    .icon_back {
+      width: 100%;
+      height: 100%;
+      display: block;
+      margin: 0 auto;
+      background-image: url("data:image/svg+xml;charset=utf-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1024 1024' width='1.5em' height='1.5em'><path fill='#FFFFFF' d='M818.881422 747.988622 755.734756 812 313.503289 363.943111 313.480533 363.965867 250.311111 299.931733 755.734756-212.113778 818.881422-148.1024 376.672711 299.954489Z' transform='translate(0, 812) scale(1, -1)'/></svg>");
+      // background-image: url("../images/icon_bar.png") -104px -10px;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 20rem / @base;
+    }
+  }
+
+
+  h1 {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    font-size: 20rem/@base;
+  }
+  .down {
+    width: 50rem / @base;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding-right: 7rem / @base;
+
+    a > img {
+      max-height: 34rem / @base;
+      overflow: hidden;
+    }
+  }
+}
+

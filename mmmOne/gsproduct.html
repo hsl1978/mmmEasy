@@ -1,0 +1,169 @@
+<!-- 凑单品 -->
+
+<!-- 国内折扣商品的详情页 -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./lib/swiper/css/swiper.min.css">
+    <link rel="stylesheet" href="./css/gsproduct.css" />
+    <script src="./lib/flexible/flexible.js"></script>
+  </head>
+  <body>
+    <div class="mmm_container">
+      <!-- 头部区域 -->
+      <header class="sq_header clearfix" id="sq_header">
+        <div class="back"><a href="index.html" class="icon_back"> </a></div>
+        <h1>   			
+          凑单品
+        </h1>
+        <div class="down">
+          <a href="#"> <img src="./images/header_app.png" alt="" /> </a>
+        </div>
+      </header>
+      <!-- 主区域 -->
+       <main class="gs_product">
+          <div class="list">
+            <div class="hd">
+              <div class="filter">
+                <ul>
+                  <li class="jd">
+                    <a href="#" class="nav_name_jd">
+                      <span>京东</span>  
+                      <i></i>
+                    </a>
+                  </li>
+                  <li class="tm">
+                    <a href="#" class="hb_name">
+                      <span>华北</span>
+                      
+                      <i></i>
+                    </a>
+                  </li>
+                  <li class="all">
+                    <a href="#">全部价格
+                    <i></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="search">
+                <i class="icon_search"></i>
+              </div>
+
+              <!-- 下拉列表 -->
+              
+                <ul class="second_ul popbox">
+                  <!-- 挖个坑 -->
+                </ul>
+              
+               
+                  <ul class="second_ul_hb popbox">
+                    <!-- 挖个坑 -->
+                  </ul>
+            
+              <div class="popprice popbox">
+                  <ul>
+                    <li class="right">
+                      <a href="#">全部价格</a>
+                      <i>√</i>
+                    </li>                   
+                  </ul>
+              </div>
+            </div>
+
+            <div class="bd gs-product-list">
+              <ul class="clearfix">
+               <!-- 挖个坑 -->
+              </ul>
+            </div>
+          </div>
+
+
+       </main>
+     
+     
+
+       
+
+      <!-- 底部区域 -->
+      <footer class="mmm_footer" id="mmm_footer">
+        <div class="footer_top">
+          <a href="javascript:;">登录</a> <a href="javascript:;">注册</a>
+          <a href="#" style="width: 40%;border: none;" id="droup">
+            <img src="http://www.zuyushop.com/wap/images/top.jpg" alt="" />
+            返回顶部</a
+          >
+        </div>
+        <div class="footer_info">
+          <p>
+            <a href="javascript:;" style="color: red;">手机APP下载</a>
+            <a href="javascript:;">慢慢买手机版</a> -- 掌上比价平台
+          </p>
+          <p>m.manmanbuy.com</p>
+        </div>
+      </footer>
+    </div>
+
+
+     
+
+    <!-- 店铺标题区域模板 -->
+    <script type="text/html" id="shopTpl">
+      {{each result v i}}
+      <li data-shopid={{v.shopId}} data-name={{v.shopName}}>
+          <a href="#">{{v.shopName}}</a>
+          <i>√</i>
+      </li>
+      {{/each}}
+    </script>
+ <!-- 地区区域模板 -->
+    <script type="text/html" id="areaTpl">
+      {{each result v i}}
+      <li data-areaid={{v.areaId}}  data-name={{v.areaName}}>
+        <a href="#">{{v.areaName}}</a>
+        <i>√</i>
+      </li>
+      {{/each}}
+    </script>
+
+    <!-- 凑单商品区域信息 -->
+      <script type="text/html" id="gspTpl">
+         {{each result v i}}
+         
+         <li>
+            <a href="#">
+              <div class="pic">
+                <img src="{{v.productImg}}" alt="">
+              </div>
+              <div class="title">{{v.productName}}</div>
+              <div class="other clearfix">
+                <div class="price">{{v.productPrice}}</div>
+                <div class="btn">去凑单</div>
+              </div>
+            </a>
+          </li>
+
+
+         {{/each}}
+      
+      
+      
+      </script>
+
+
+    <!-- 引入jq -->
+    <script src="./lib/jquery/jquery.min.js"></script>
+    <script src="./lib/swiper/js/swiper.min.js"></script>
+    <!-- 引入模板引擎 -->
+    <script src="./lib/artTemplate/template-web.js"></script>
+    <script src="./js/common.js"></script>
+    <script src="./js/gsproduct.js"></script>
+     
+   
+    
+  </body>
+</html>

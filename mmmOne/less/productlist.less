@@ -1,0 +1,121 @@
+@import "base.less";
+
+@mainColor: #ff9000;
+
+#product-list {
+  margin-top: 1rem / @base;
+
+  .product-list-title {
+    height: 38rem / @base;
+    background: #ebebeb;
+    background-image: linear-gradient(to bottom, #fff, #ebebeb);
+    border-top: 1rem / @base solid #ebebeb;
+    border-bottom: 1rem / @base solid #ccc;
+    line-height: 36rem / @base;
+    padding-left: 8rem / @base;
+    font-size: 14rem / @base;
+
+    .select {
+      float: right;
+      margin-right: 8rem / @base;
+      height: 28rem / @base;
+      display: block;
+      background-color: #d0d0d0;
+      background-image: linear-gradient(to bottom, #d7d7d7, #f5f5f5);
+      border-bottom: 1rem / @base solid #dadada;
+      box-shadow: 0 1rem / @base 2rem / @base #888;
+      border-radius: 5rem / @base;
+      font-size: 14rem / @base;
+      line-height: 28rem / @base;
+      overflow: hidden;
+      border: none;
+      padding: 0 16rem / @base;
+      margin-top: 4rem / @base;
+    }
+  }
+
+  .productlist_content {
+    background-color: #fff;
+
+    li {
+      padding: 10rem / @base;
+      border-bottom: 1px solid #e7e7e7;
+
+      a {
+        display: block;
+
+        .pic {
+          float: left;
+          width: 110rem / @base;
+
+          img {
+            width: 100rem / @base;
+            height: 100rem / @base;
+          }
+        }
+
+        .info{
+          font-size: 14rem/@base;
+          padding-left: 100rem/@base;
+          line-height: 24rem/@base;
+
+          .text{
+            color: #333;
+            line-height: 22rem/@base;
+            min-height: 44rem/@base;
+          }
+          .price em{
+            font-size: 18rem/@base;
+            color: #ea3900;
+            float: left;
+            vertical-align: middle;
+          }
+          .other{
+            color: #a1a1a1;
+            font-size: 12px;
+
+            em{
+              margin-left: 10rem/@base;
+              font-weight: normal;
+            }
+          }
+        }
+      }
+    }
+
+    .page {
+      margin-top: 20rem/@base;
+      text-align: center;
+
+      span{
+        width: 33.33%;
+        float: left;
+        text-align: center;
+
+        a{
+          box-sizing: border-box;
+          background-color: #d4d4d4;
+          background-image:linear-gradient(to bottom,#f1f1f1,#d4d4d4);
+          border-bottom: 1rem / @base solid #dadada;
+          text-align: center;
+          box-shadow: 0 1rem / @base 2rem / @base #888;
+          border-radius: 5rem / @base;
+          font-size: 14rem / @base;
+          line-height: 32rem / @base;
+
+          overflow: hidden;
+          border: none;
+          padding: 8rem/@base 20rem / @base;
+
+        }
+
+        #selectPage{
+          font-size: 16rem/@base;
+          padding:8rem/@base 15rem/@base;
+          height: 36rem/@base;
+          border: 1rem/@base solid #bababa;
+        }
+      }
+    }
+  }
+}

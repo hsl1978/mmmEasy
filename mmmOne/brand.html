@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="./css/brand.css">
+  <script src="./lib/flexible/flexible.js"></script>
+</head>
+<body>
+  <div class="mmm_container">
+    <!-- 头部区域 -->
+    <header class="mmm_header" id="mmm_header">
+      <div class="logo">
+        <a href="index.html">
+          <img src="./images/header_logo.png" alt="">
+        </a>
+      </div>
+      <div class="down">
+        <a href="#">
+          <img src="./images/header_app.png" alt="">
+        </a>
+      </div>
+    </header>
+    <!-- 搜索区域 -->
+    <div class="mmm_search">
+      <form action="" class="search" id="form">
+        <input type="search" placeholder="请输入您想比价的商品" id="index-search">
+        <input type="button" name="" id="" value="搜索">
+      </form>
+    </div>
+
+     <!-- 面包屑导航部分 -->
+    <main class="brandmain">
+
+     <!-- 巨坑 -->
+
+
+    </main>
+
+   
+    
+   
+   
+    <!-- 底部区域 -->
+    <footer class="mmm_footer" id="mmm_footer">
+      <div class="footer_top">
+        <a href="javascript:;">登录</a>
+        <a href="javascript:;">注册</a>
+        <a href="#" style="width: 40%;border: none;" id="droup">
+          <img src="http://www.zuyushop.com/wap/images/top.jpg" alt="">
+          返回顶部</a>
+      </div>
+      <div class="footer_info">
+        <p>
+          <a href="javascript:;" style="color: red;">手机APP下载</a>
+          <a href="javascript:;">慢慢买手机版</a>
+          -- 掌上比价平台
+            
+        </p>
+        <p>m.manmanbuy.com</p>
+      </div>
+    </footer>
+    
+  </div>
+
+  
+
+
+  <!--主列表导航区域动态模板渲染  -->
+  <script type="text/html" id="brandTpl">
+
+    <section id="product-list">
+        <nav class="product-list-title clearfix">
+            <a href="index.html">首页</a> >
+            <a href="brandTitle.html">全部分类</a> >
+            <a href="#">{{brandTitle.split("十")[0]}}</a> >
+        </nav>
+       
+     </section>
+       <!-- 热门分类 -->
+    <div class="hot">
+      <h3>{{brandTitle.split("十")[0]}}那个牌子好</h3>
+    </div>
+    
+    <!-- 列表区域 -->
+    <div class="row brand_list clearfix">
+      <ul>
+        {{each result v i}}
+        <li>
+          <a href="#">
+            <em class="top{{i + 1}}">{{i + 1}}</em>
+            <div class="inner">
+              <div class="txt">{{v.brandName}}</div>
+              <p>{{v.brandInfo}}</p>
+            </div>
+          </a>
+        </li>
+        {{/each}}
+      </ul>
+    </div>
+
+    <!-- 电视产品销量排行 -->
+    <div class="hot">
+       <h3>{{brandTitle.split("十")[0]}}产品销量排行</h3>
+    </div>
+
+    <!-- 产品销量排行列表 -->
+     <div class="productlist_content">
+         <!-- 挖个坑 -->
+     </div>
+
+      <!-- 平板电视最新品论 -->
+    <div class="hot">
+       <h3>{{brandTitle.split("十")[0]}}最新品论</h3>
+    </div>
+
+    <!-- 评论区域 -->
+    <div class="brandcom">
+     <!-- 挖个评论坑 -->
+    </div>
+    
+  </script>
+
+
+  <!-- 销量产品列表 -->
+
+  <script type="text/html" id="brandcomTpl">
+    <ul>  
+      {{each result v i}}    
+      <li data-productId={{v.productId}}>
+        <a href="bijia.html?productId={{v.productId}}&category={{v.brandName}}" class="clearfix">
+          <div class="pic">
+            {{# v.productImg}}
+          </div>
+          <div class="info">
+            <div class="text">{{v.productName}}</div>
+            <div class="price clearfix">
+              <em>{{v.productPrice}}</em>
+              <span class="start">★★★★★</span>
+            </div>
+            <div class="other"><em>{{v.productQuote}}</em><em>{{v.productCom}}</em></div>
+          </div>
+        </a>
+      </li>  
+      {{/each}}  
+    </ul>
+  
+  </script>
+
+
+  <!-- 评论区域的模板 -->
+  <script type="text/html" id="bdcomTpl">
+    <ul>
+      {{each result v i}}
+        <li>
+          <a href="#">
+            <div class="protit clearfix">
+              <div class="pic">
+                <img src="./images/comment1.jpg" alt="">
+              </div>
+              <div class="txt">奥克斯(AUX) KFR-25GW/FK01+3 1匹 挂壁式定速冷暖空调</div>
+            </div>
+            <div class="plbox">
+              <div class="name">
+                  {{v.comName}}
+                <span class="start">★★★★★</span>
+              </div>
+              <i>{{v.comTime}}</i>
+
+              <div class="con">
+                   {{v.comContent}}
+              </div>
+            </div>
+          </a>
+        </li>
+        {{/each}}
+      </ul>
+  
+  
+  
+  </script>
+   
+
+   
+
+  <!-- 引入jq -->
+  <script src="./lib/jquery/jquery.min.js"></script>
+  <!-- 引入模板引擎 -->
+  <script src="./lib/artTemplate/template-web.js"></script>
+  <script src="./js/common.js"></script>
+  <script src="./js/brand.js"></script>
+</body>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/moneyctrl.css" />
+    <script src="./lib/flexible/flexible.js"></script>
+  </head>
+  <body>
+    <div class="mmm_container">
+      <!-- 头部区域 -->
+      <header class="sq_header clearfix" id="sq_header">
+        <div class="back"><a href="index.html" class="icon_back"> </a></div>
+        <h1>省钱控 - 最新优惠</h1>
+        <div class="down">
+          <a href="#"> <img src="./images/header_app.png" alt="" /> </a>
+        </div>
+      </header>
+      <!-- 搜索区域 -->
+      <div class="mmm_search">
+        <form action="" class="search" id="form">
+          <input
+            type="search"
+            placeholder="请输入您要搜索的商品"
+            id="index-search"
+          />
+          <input type="button" name="" id="" value="搜索" />
+        </form>
+      </div>
+
+      <!-- 主菜单区域 -->
+      <div class="main">
+        <div class="main_list"><!-- 挖个坑 -->
+        
+        </div>
+      </div>
+
+      <!-- 底部区域 -->
+      <footer class="mmm_footer" id="mmm_footer">
+        <div class="footer_top">
+          <a href="javascript:;">登录</a> <a href="javascript:;">注册</a>
+          <a href="#" style="width: 40%;border: none;" id="droup">
+            <img src="http://www.zuyushop.com/wap/images/top.jpg" alt="" />
+            返回顶部</a
+          >
+        </div>
+        <div class="footer_info">
+          <p>
+            <a href="javascript:;" style="color: red;">手机APP下载</a>
+            <a href="javascript:;">慢慢买手机版</a> -- 掌上比价平台
+          </p>
+          <p>m.manmanbuy.com</p>
+        </div>
+      </footer>
+    </div>
+
+    <!-- 菜单导航区域模板 -->
+    <script type="text/html" id="navTpl">
+      {{each result v i}}
+      <div class="item  {{v.indexmenuId === 7 ? "more": ""}}">
+        <a href="{{v.titlehref}}">
+           {{# v.img }}
+          <p>{{v.name}}</p>
+        </a>
+      </div>
+      {{/each}}
+    </script>
+
+    <!-- 主菜单列表区域动态模板渲染 -->
+    <script type="text/html" id="mctrTpl">
+
+      <ul>
+        {{each result v i}}
+          <li class="clearfix">
+            <a href="moneyproduct.html?productId={{v.productId}}">
+              <div class="pic">
+                {{# v.productImg2 }}
+              </div>
+              <div class="info">
+                <div class="title">
+                   {{ v.productName }}
+                  <span>{{ v.productPinkage }}</span>
+                </div>
+                <div class="other clearfix">
+                  <span class="mall">{{ v.productFrom }} |  {{ v.productTime }}</span>
+                  <span class="message">
+                    <i class="icon_message"></i>
+                    {{ v.productComCount.slice(1,2)}}
+                  </span>
+                </div>
+              </div>
+            </a>
+          </li>
+          {{/each}}
+        </ul>
+
+       <!-- 分页 -->
+       <div class="page clearfix">
+          <span><a href="#" class="up">上一页</a></span>
+          <span>
+            <select name="" id="selectPage">
+              var pagenum = {{pagenum}};
+            <%
+              for(var i=0;i< pagenum; i++) {
+            %>
+              {{if i + 1 === currentpage}}
+              <option selected value="<%= (i+1) %>"><%= (i+1) %>/{{pagenum}}</option>
+              {{else}}
+              <option value="<%= (i+1) %>"><%= (i+1) %>/{{pagenum}}</option>
+              {{/if}}
+              <% } %>
+            </select>
+          </span>
+          <span><a href="#" class="down">下一页</a></span>
+        </div>
+    </script>
+
+    <!-- 引入jq -->
+    <script src="./lib/jquery/jquery.min.js"></script>
+    <!-- 引入模板引擎 -->
+    <script src="./lib/artTemplate/template-web.js"></script>
+    <script src="./js/common.js"></script>
+    <script src="./js/moneyctrl.js"></script>
+  </body>
+</html>

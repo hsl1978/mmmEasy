@@ -1,0 +1,121 @@
+@import "base.less";
+
+@mainColor: #ff9000;
+
+.sq_header {
+  background-color: #f4483e;
+}
+
+
+.title{
+  margin: 8rem/@base;
+  font-size: 12rem/@base;
+  text-align:center;
+  color: #999;
+}
+
+.coupon_list{
+  color: #fff;
+
+  ul{
+    li{
+      border-bottom: 1rem/@base solid #e7e7e7;
+      background-image: url("data:image/svg+xml;charset=utf-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1024 1024'><path fill='#999999' d='M746.255255 299.653099 746.33098 299.728824 713.12674 332.933063 713.049992 332.857339 297.859875 748.048479 264.635169 714.82275 679.816077 299.642866 264.635169-115.538041 297.859875-148.762747 713.00906 266.386438 713.085808 266.30969 746.341213 299.567141Z' transform='translate(0, 812) scale(1, -1)'/></svg>");
+      background-repeat: no-repeat;
+      background-size: 20rem/@base 20rem/@base;
+      background-position: right center;
+      list-style: none;
+      position: relative;
+      overflow: hidden;
+
+
+      a{
+        display: block;
+        width: 100%;
+        height: 100%;
+        padding: 10rem/@base;
+        box-sizing: content-box;
+
+        .pic{
+          float: left;
+          width: 100rem/@base;
+          height: 80rem/@base;
+          padding-right: 10rem/@base;
+          overflow: hidden;
+
+          img{
+            width: 100%;
+            height: 100%;
+          }
+        }
+
+        .info{
+          padding-right: 30rem/@base;
+          overflow: hidden;
+          font-size: 14rem/@base;
+          line-height: 24rem/@base;
+
+          .txt{
+            h3{
+              font-size: 14rem/@base;
+              font-weight: 400;
+              color: #333;
+              line-height: 20rem/@base;
+              margin: 0;
+              padding: 0;
+
+            }
+          }
+
+          .time{
+            color: #EE7700;
+            font-size: 12rem/@base;
+            margin-top: 10rem/@base;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+//遮眼罩
+ 
+.cover{
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,.5);
+  z-index: 99999;
+  display: none;
+
+  .swiper-container{
+    width: 200rem/@base;
+    height: 200rem/@base;
+    background-color: #fff;  
+    margin: 50rem/@base auto;
+    
+
+
+    img{
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .close{
+    width: 20rem/@base;
+    height: 20rem/@base;
+    border-radius: 10rem/@base;
+    background-color: #fff;
+    position: absolute;
+    right: 10rem/@base;
+    top: 10rem/@base;
+    font-size: 16rem/@base;
+    color: #f4483e;
+    text-align: center;
+    line-height: 21rem/@base;
+  }
+}

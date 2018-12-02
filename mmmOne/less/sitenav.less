@@ -1,0 +1,55 @@
+@import "base.less";
+
+@mainColor: #ff9000;
+.sq_header {
+  background-color: @mainColor;
+}
+
+.sitenav{
+  max-width: 50%;
+  margin: 0 auto;
+  // background-color: pink;
+  height: 100%;
+  margin-top: 10rem/@base;
+
+  ul{
+    li{
+      float: left;
+      width: 40%;
+      
+      a{
+        border: 1px solid #ccc;
+        // width: 100%;
+        // height: 100%;
+        float: left;
+        padding: 10rem/@base 8rem/@base;
+        margin: 0 0 5rem/@base 5rem/@base;
+        background-color: #f4f4f4;
+
+
+        .pic{
+          width: 16rem/@base;
+          height: 16rem/@base;
+          float: left;
+          // background-color: blue;
+          margin-right: 5rem/@base;
+
+          img{
+            margin-top: 3rem/@base;
+            vertical-align: top;
+             
+          }
+        }
+
+        span{
+          color: #000;
+          font-size: 16rem/@base;
+          text-align: center;
+           
+          float: left;
+           
+        }
+      }
+    }
+  }
+}

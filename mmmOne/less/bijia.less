@@ -1,0 +1,202 @@
+@import "base.less";
+
+@mainColor: #ff9000;
+
+#product-list {
+  margin-top: 1rem / @base;
+
+  .product-list-title {
+    height: 38rem / @base;
+    background: #ebebeb;
+    background-image: linear-gradient(to bottom, #fff, #ebebeb);
+    border-top: 1rem / @base solid #ebebeb;
+    border-bottom: 1rem / @base solid #ccc;
+    line-height: 36rem / @base;
+    padding-left: 8rem / @base;
+    font-size: 14rem / @base;
+
+    .select {
+      float: right;
+      margin-right: 8rem / @base;
+      height: 28rem / @base;
+      display: block;
+      background-color: #d0d0d0;
+      background-image: linear-gradient(to bottom, #d7d7d7, #f5f5f5);
+      border-bottom: 1rem / @base solid #dadada;
+      box-shadow: 0 1rem / @base 2rem / @base #888;
+      border-radius: 5rem / @base;
+      font-size: 14rem / @base;
+      line-height: 28rem / @base;
+      overflow: hidden;
+      border: none;
+      padding: 0 16rem / @base;
+      margin-top: 4rem / @base;
+    }
+  }
+
+  .productlist_content {
+    background-color: #fff;
+    position: relative;
+
+    .product_name {
+      text-align: center;
+      font-size: 17rem / @base;
+      width: 90%;
+      margin: auto;
+      margin-top: 16rem / @base;
+      height: 100%;
+    }
+
+    .product_img {
+      width: 200rem / @base;
+      height: 200rem / @base;
+      display: block;
+      margin: 0 auto;
+
+      img{
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .product_collect {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      margin-right: 24rem / @base;
+
+      a {
+        display: block;
+        width: 39rem / @base;
+        height: 39rem / @base;
+
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+  }
+
+  .tab {
+    width: 100%;
+    margin-top: 20rem / @base;
+    height: 34rem / @base;
+    line-height: 34rem / @base;
+    font-size: 15rem / @base;
+    background-color: #ffbb00;
+    background-image: linear-gradient(to right, #ffbb00, #ffd050);
+    border-top: 1rem / @base solid #c14d00;
+    border-bottom: 1rem / @base solid #c14d00;
+    overflow: hidden;
+
+    li {
+      float: left;
+      width: 33.33%;
+      height: 34rem / @base;
+      text-align: center;
+      box-sizing: border-box;
+    }
+
+    li.tab-left {
+      background-color: #ffbb00;
+      background-image: linear-gradient(to right, #ffa632, #ff9000);
+      // box-sizing: border-box;
+      // border-bottom: 1rem/@base solid #c14d00;
+    }
+    .tab_center {
+      border-right: 1rem / @base solid #c14d00;
+      border-left: 1rem / @base solid #c14d00;
+    }
+  }
+
+  .jd_shop {
+    table {
+      margin-top: 10rem / @base;
+      margin-bottom: 10rem / @base;
+      font-size: 16rem / @base;
+
+      td {
+        line-height: 22rem / @base;
+      }
+      .p_pic{
+        width: 54rem/@base;
+        text-align: center;
+        // border-bottom: 1rem/@base solid #bbb;
+      }
+      .red {
+        color: #d10311;
+        text-align: right;
+        padding-right: 15rem / @base;
+      }
+    }
+    .note {
+      font-size: 12rem / @base;
+      line-height: 18rem / @base;
+      color: #888;
+      padding: 8rem / @base 10rem / @base;
+      border-top: 1rem / @base solid #ccc;
+    }
+  }
+
+  // 评论
+  .product_com_title {
+    border-top: 4rem / @base solid #7a7a7a;
+    margin-top: 5rem / @base;
+
+    div {
+      height: 34rem / @base;
+      line-height: 34rem / @base;
+      text-align: center;
+      overflow: hidden;
+      background: #dbdbdb;
+      font-size: 14rem / @base;
+      border-top: 1rem / @base solid #fff;
+    }
+  }
+
+  // 评论列表
+  .product_com_list {
+    ul > li {
+      font-size: 12rem / @base;
+      color: #666;
+      padding: 10rem / @base;
+      padding-bottom: 0;
+      line-height: 18rem / @base;
+      margin-top: 3rem / @base;
+      border-bottom: 1rem / @base solid #ccc;
+
+      .pull_left{
+        float: left;
+      }
+      .pull_right{
+        float: right;
+      }
+
+      .content{
+        color: #000;
+        line-height: 22rem/@base;
+        padding-top: 5rem/@base;
+      }
+    }
+    .more{
+      margin-top: 16rem/@base;
+      padding: 0 8rem/@base;
+
+      .more_com{
+        display: block;
+        background-color: #d4d4d4;
+        height: 32rem/@base;
+        background-image: linear-gradient(to bottom,#f1f1f1,#d4d4d4);
+        border-bottom: 1rem/@base solid #bababa;
+        box-shadow: 0 0 1rem/@base #666;
+        border-radius: 5rem/@base;
+        text-align: center;
+        font-size: 14rem/@base;
+        line-height: 32rem/@base;
+        overflow: hidden;
+      }
+    }
+  }
+
+}

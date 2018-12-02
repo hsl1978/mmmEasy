@@ -1,0 +1,121 @@
+<!-- 国内折扣商品的详情页 -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./lib/swiper/css/swiper.min.css">
+    <link rel="stylesheet" href="./css/couponproduct.css" />
+    <script src="./lib/flexible/flexible.js"></script>
+  </head>
+  <body>
+    <div class="mmm_container">
+      <!-- 头部区域 -->
+      <header class="sq_header clearfix" id="sq_header">
+        <div class="back"><a href="javascript:history.go(-1);" class="icon_back"> </a></div>
+        <h1>   			
+         优惠券
+        </h1>
+        <div class="down">
+          <a href="#"> <img src="./images/header_app.png" alt="" /> </a>
+        </div>
+      </header>
+      <!-- 主区域 -->
+      <main>
+        <!-- 标题 -->
+        <div class="title">
+          
+          --点餐前出示手机中的优惠券，即可享受优惠--
+        
+        </div>
+        <!-- 列表区域 -->
+        <div class="coupon_list">
+          <ul class="clearfix">
+            <!-- 挖个坑 -->
+          </ul>
+        </div>
+      </main>
+     
+     
+
+       
+
+      <!-- 底部区域 -->
+      <footer class="mmm_footer" id="mmm_footer">
+        <div class="footer_top">
+          <a href="javascript:;">登录</a> <a href="javascript:;">注册</a>
+          <a href="#" style="width: 40%;border: none;" id="droup">
+            <img src="http://www.zuyushop.com/wap/images/top.jpg" alt="" />
+            返回顶部</a
+          >
+        </div>
+        <div class="footer_info">
+          <p>
+            <a href="javascript:;" style="color: red;">手机APP下载</a>
+            <a href="javascript:;">慢慢买手机版</a> -- 掌上比价平台
+          </p>
+          <p>m.manmanbuy.com</p>
+        </div>
+      </footer>
+    </div>
+
+
+    <div class="cover">
+       
+        <div class="swiper-container">
+
+            <ul class="swiper-wrapper">
+              <li class="swiper-slide"><a href="#"><img src="./images/banner01.jpg" alt=""></a></li>
+              <li class="swiper-slide"><a href="#"><img src="./images/banner02.jpg" alt=""></a></li>
+              <li class="swiper-slide"><a href="#"><img src="./images/banner03.jpg" alt=""></a></li>   
+            </ul>
+      
+            <!-- 如果需要分页器 -->
+            <div class="swiper-pagination"></div>
+
+              <!-- 如果需要导航按钮 -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+
+
+        </div>
+      
+      <div class="close">X</div>
+    </div>
+
+    <!-- 商品区域标题区域模板 -->
+    <script type="text/html" id="couproTpl">
+      {{each result v i}}
+
+      <li>
+          <a href="#">
+          <div class="pic">
+            {{# v.couponProductImg}}
+          </div>
+          <div class="info">
+            <div class="txt">
+              <h3>{{v.couponProductName}}</h3>
+              <h2> {{v.couponProductPrice}}</h2>
+            </div>
+            <div class="time">{{v.couponProductTime}}</div>
+          </div>
+          </a>
+        </li>
+        {{/each}}
+
+    </script>
+
+  
+    <!-- 引入jq -->
+    <script src="./lib/jquery/jquery.min.js"></script>
+    <script src="./lib/swiper/js/swiper.min.js"></script>
+    <!-- 引入模板引擎 -->
+    <script src="./lib/artTemplate/template-web.js"></script>
+    <script src="./js/common.js"></script>
+    <script src="./js/couponproduct.js"></script>
+   
+    
+  </body>
+</html>
